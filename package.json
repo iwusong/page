@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "wrangler dev": "wrangler pages dev",
     "preview": "npm run build && wrangler pages dev ./dist",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "deploy": "npm run build && wrangler pages deploy ./dist"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
