@@ -3,8 +3,8 @@ pages_build_output_dir = "./dist"
 
 
 [[d1_databases]]
-binding = "DB" # i.e. available in your Worker on env.DB
-database_name = "prod-d1-tutorial"
-database_id = "e43fe1cb-3f8b-4338-8d09-270bc2ed226e"
+binding = "db" # i.e. available in your Worker on env.DB
+database_name = "db"
+database_id = "d1e42bfe-680f-4958-9785-0ecae47dc6e3"
 
 
