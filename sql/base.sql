@@ -1,2 +1,1 @@
-DROP TABLE IF EXISTS activity_record;
-CREATE TABLE IF NOT EXISTS Customers (CustomerId INTEGER PRIMARY KEY, CompanyName TEXT, ContactName TEXT);
+ INSERT INTO activity_record (time, activity_description, user ) VALUES (2, 'azsdsa', 'ewqeqw' );

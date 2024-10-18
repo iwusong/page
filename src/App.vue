@@ -1,87 +1,54 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import request from '@/utils/request.js'
-request.get("/about")
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="h-15/100 shadow-md rounded">
+    <div class="h-10/100"></div>
+    <div class="h-50/100 flex items-center justify-between">
+      <div class="ml-4 text-3xl font-bold font-sans">Ar</div>
+      <van-icon class="mr-4" name="setting-o" size="2rem" />
     </div>
-  </header>
+    <div class="h-40/100 flex flex-nowrap overflow-x-auto noscroll">
+      <div class="flex-shrink-0" v-for="i in 19">
+        <van-button
+          icon="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png"
+          class="mx-1"
+          color="#fff"
+          round
+          size="small"
+          type="success"
+        >
+          <span class="text-black font-bold">锻炼 </span>
+        </van-button>
+      </div>
+    </div>
+    <!--    <div class="h-10/100"></div>-->
+  </div>
 
-  <RouterView />
+  <div class="h-85/100 flex">
+    <div class="w-10/12 h-full overflow-y-scroll">
+      <div v-for="i in 100" class="bg-white h-20 m-3 mr-2 rounded-2xl shadow"></div>
+    </div>
+    <div class="w-2/12 p-1 flex flex-col justify-between">
+      <div class="flex flex-col items-center">
+        <div>23年</div>
+        <div>9月</div>
+        <div>6日</div>
+      </div>
+      <div class="h-20/100">
+        <div class="shadow-md rounded-full w-12">
+          <van-icon name="add-o" size="3rem" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.noscroll {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.noscroll::-webkit-scrollbar {
+  display: none;
 }
 </style>
+<script setup></script>

@@ -14,18 +14,24 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "vant": "^4.9.8",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "tailwindcss": "^3.4.14",
     "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "@vue/eslint-config-prettier": "^9.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.4.47",
     "prettier": "^3.2.5",
     "vite": "^5.3.1",
     "wrangler": "^3.80.4"
-  }
+  },
+  "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"
 }
