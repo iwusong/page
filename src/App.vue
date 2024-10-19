@@ -1,3 +1,14 @@
+<script setup>
+import { list } from '@/api/index.js'
+import { ref } from 'vue'
+
+let data = ref([])
+list('user').then((x) => {
+  console.log(x)
+  data.value = x
+})
+</script>
+
 <template>
   <div class="h-15/100 shadow-md rounded">
     <div class="h-10/100"></div>
@@ -24,7 +35,9 @@
 
   <div class="h-85/100 flex">
     <div class="w-10/12 h-full overflow-y-scroll">
-      <div v-for="i in 100" class="bg-white h-20 m-3 mr-2 rounded-2xl shadow"></div>
+      <div v-for="i in data" :key="i.id" class="bg-white h-20 m-3 mr-2 rounded-2xl shadow">
+        {{ i }}
+      </div>
     </div>
     <div class="w-2/12 p-1 flex flex-col justify-between">
       <div class="flex flex-col items-center">
@@ -40,7 +53,6 @@
     </div>
   </div>
 </template>
-
 <style scoped>
 .noscroll {
   scrollbar-width: none;
@@ -51,4 +63,3 @@
   display: none;
 }
 </style>
-<script setup></script>
