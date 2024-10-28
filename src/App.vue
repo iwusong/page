@@ -1,12 +1,26 @@
 <script setup>
-import { list } from '@/api/index.js'
+import { add, list } from '@/api/index.js'
 import { ref } from 'vue'
+import { showToast } from 'vant'
 
 let data = ref([])
 list('user').then((x) => {
   console.log(x)
   data.value = x
 })
+
+function increased_activities(user, des) {
+  add(user, des).then((x) => {
+    console.log(x)
+    if (x.success) {
+      showToast({
+        message: 'asd',
+        position: 'top',
+        className: 'toas'
+      })
+    }
+  })
+}
 </script>
 
 <template>
@@ -46,7 +60,7 @@ list('user').then((x) => {
         <div>6日</div>
       </div>
       <div class="h-20/100">
-        <div class="shadow-md rounded-full w-12">
+        <div @click="increased_activities('user', 'des')" class="shadow-md rounded-full w-12">
           <van-icon name="add-o" size="3rem" />
         </div>
       </div>
