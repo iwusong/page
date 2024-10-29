@@ -50,7 +50,7 @@ function increased_activities(user, des) {
   <div class="h-85/100 flex">
     <div class="w-10/12 h-full overflow-y-scroll">
       <div v-for="i in data" :key="i.id" class="bg-white h-20 m-3 mr-2 rounded-2xl shadow">
-        {{ i }}
+        {{ i.activity }}
       </div>
     </div>
     <div class="w-2/12 p-1 flex flex-col justify-between">
